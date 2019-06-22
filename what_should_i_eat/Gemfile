@@ -1,4 +1,6 @@
 source "https://rubygems.org"
 
+gem "what_should_i_eat"
+
 # Specify your gem's dependencies in what_should_i_eat.gemspec
-gemspec
+# gemspec
