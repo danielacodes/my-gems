@@ -1,5 +1,6 @@
-require 'net/http'
-require 'json'
+require "net/http"
+require "json"
+require "what_should_i_eat/printing"
 
 module WhatShouldIEat
   def self.fresh
@@ -7,7 +8,6 @@ module WhatShouldIEat
     recipes = JSON.parse(result)
     name = recipes.first['items'].first['label']
     url = recipes.first['items'].first['url']
-
-    puts "Would you like to eat #{name}? You can find the recipe by clicking on the link #{url}"
+    Printing.print name, url
   end
 end
